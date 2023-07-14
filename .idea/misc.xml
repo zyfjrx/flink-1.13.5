@@ -5,8 +5,22 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/flink-scala-shell/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/flink-container/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-end-to-end-tests/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-examples/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-fs-tests/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-kubernetes/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-mesos/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-scala/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-streaming-scala/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-test-utils-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-tests/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-yarn-tests/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
