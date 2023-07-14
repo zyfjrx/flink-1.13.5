@@ -9,7 +9,30 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/flink-connectors/flink-connector-cassandra/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-connectors/flink-connector-elasticsearch-base/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-connectors/flink-connector-elasticsearch5/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-connectors/flink-connector-elasticsearch6/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-connectors/flink-connector-elasticsearch7/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-connectors/flink-connector-hbase-1.4/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-connectors/flink-connector-hbase-2.2/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-connectors/flink-connector-hbase-base/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-connectors/flink-connector-hive/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-connectors/flink-connector-kinesis/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-connectors/flink-connector-nifi/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-connectors/flink-connector-rabbitmq/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-connectors/flink-connector-twitter/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-connectors/flink-sql-connector-elasticsearch6/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-connectors/flink-sql-connector-elasticsearch7/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-connectors/flink-sql-connector-hbase-1.4/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-connectors/flink-sql-connector-hbase-2.2/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-connectors/flink-sql-connector-hive-1.2.2/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-connectors/flink-sql-connector-hive-2.2.0/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-connectors/flink-sql-connector-hive-2.3.6/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-connectors/flink-sql-connector-hive-3.1.2/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-connectors/flink-sql-connector-kinesis/pom.xml" />
         <option value="$PROJECT_DIR$/flink-container/pom.xml" />
+        <option value="$PROJECT_DIR$/flink-contrib/pom.xml" />
         <option value="$PROJECT_DIR$/flink-end-to-end-tests/pom.xml" />
         <option value="$PROJECT_DIR$/flink-examples/pom.xml" />
         <option value="$PROJECT_DIR$/flink-fs-tests/pom.xml" />

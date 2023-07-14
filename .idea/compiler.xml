@@ -109,14 +109,9 @@
         <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="flink-metrics-influxdb_2.11" />
-        <module name="flink-sql-connector-elasticsearch7_2.11" />
-        <module name="flink-connector-hbase-base_2.11" />
         <module name="flink-sql-orc_2.11" />
         <module name="flink-table-planner-blink_2.11" />
-        <module name="flink-connector-hive_2.11" />
         <module name="flink-gelly-scala_2.11" />
-        <module name="flink-connector-elasticsearch5_2.11" />
-        <module name="flink-connector-nifi_2.11" />
         <module name="flink-sql-client_2.11" />
         <module name="flink-table-api-scala_2.11" />
         <module name="flink-hadoop-compatibility_2.11" />
@@ -126,47 +121,30 @@
         <module name="flink-cep_2.11" />
         <module name="flink-connector-jdbc_2.11" />
         <module name="flink-connector-wikiedits_2.11" />
-        <module name="flink-sql-connector-hbase-2.2_2.11" />
-        <module name="flink-sql-connector-kinesis_2.11" />
         <module name="flink-table-planner_2.11" />
         <module name="flink-walkthrough-common_2.11" />
-        <module name="flink-sql-connector-hive-1.2.2_2.11" />
         <module name="flink-gelly_2.11" />
-        <module name="flink-connector-kinesis_2.11" />
-        <module name="flink-sql-connector-hive-2.3.6_2.11" />
         <module name="flink-statebackend-rocksdb_2.11" />
         <module name="flink-sql-parquet_2.11" />
         <module name="flink-metrics-jmx_2.11" />
-        <module name="flink-connector-elasticsearch6_2.11" />
         <module name="flink-table-api-scala-bridge_2.11" />
         <module name="flink-hadoop-bulk_2.11" />
         <module name="flink-queryable-state-runtime_2.11" />
         <module name="flink-statebackend-heap-spillable_2.11" />
         <module name="flink-state-processor-api_2.11" />
-        <module name="flink-connector-twitter_2.11" />
-        <module name="flink-sql-connector-hive-3.1.2_2.11" />
-        <module name="flink-connector-elasticsearch-base_2.11" />
         <module name="flink-orc_2.11" />
-        <module name="flink-connector-hbase-1.4_2.11" />
         <module name="flink-table-api-java-bridge_2.11" />
         <module name="flink-statebackend-changelog_2.11" />
-        <module name="flink-sql-connector-hbase-1.4_2.11" />
         <module name="flink-hcatalog_2.11" />
-        <module name="flink-connector-elasticsearch7_2.11" />
         <module name="flink-metrics-prometheus_2.11" />
         <module name="flink-test-utils_2.11" />
         <module name="flink-connector-kafka_2.11" />
-        <module name="flink-connector-hbase-2.2_2.11" />
-        <module name="flink-sql-connector-hive-2.2.0_2.11" />
-        <module name="flink-sql-connector-elasticsearch6_2.11" />
         <module name="flink-table-runtime-blink_2.11" />
-        <module name="flink-connector-cassandra_2.11" />
         <module name="flink-parquet_2.11" />
         <module name="flink-table-uber-blink_2.11" />
         <module name="flink-cep-scala_2.11" />
         <module name="flink-connector-gcp-pubsub_2.11" />
         <module name="flink-gelly-examples_2.11" />
-        <module name="flink-connector-rabbitmq_2.11" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -175,9 +153,23 @@
       <module name="flink-batch-sql-test_2.11" target="11" />
       <module name="flink-cli-test_2.11" target="11" />
       <module name="flink-confluent-schema-registry" target="1.8" />
+      <module name="flink-connector-cassandra_2.11" target="11" />
+      <module name="flink-connector-elasticsearch-base_2.11" target="11" />
+      <module name="flink-connector-elasticsearch5_2.11" target="11" />
+      <module name="flink-connector-elasticsearch6_2.11" target="11" />
+      <module name="flink-connector-elasticsearch7_2.11" target="11" />
       <module name="flink-connector-gcp-pubsub-emulator-tests" target="1.8" />
+      <module name="flink-connector-hbase-1.4_2.11" target="11" />
+      <module name="flink-connector-hbase-2.2_2.11" target="11" />
+      <module name="flink-connector-hbase-base_2.11" target="11" />
+      <module name="flink-connector-hive_2.11" target="11" />
+      <module name="flink-connector-kinesis_2.11" target="11" />
+      <module name="flink-connector-nifi_2.11" target="11" />
+      <module name="flink-connector-rabbitmq_2.11" target="11" />
       <module name="flink-connector-test-utils" target="1.8" />
+      <module name="flink-connector-twitter_2.11" target="11" />
       <module name="flink-container_2.11" target="11" />
+      <module name="flink-contrib" target="1.8" />
       <module name="flink-dataset-allround-test" target="1.8" />
       <module name="flink-dataset-fine-grained-recovery-test" target="1.8" />
       <module name="flink-datastream-allround-test" target="1.8" />
@@ -218,6 +210,15 @@
       <module name="flink-scala-shell_2.11" target="1.8" />
       <module name="flink-scala_2.11" target="11" />
       <module name="flink-sql-client-test" target="1.8" />
+      <module name="flink-sql-connector-elasticsearch6_2.11" target="11" />
+      <module name="flink-sql-connector-elasticsearch7_2.11" target="11" />
+      <module name="flink-sql-connector-hbase-1.4_2.11" target="11" />
+      <module name="flink-sql-connector-hbase-2.2_2.11" target="11" />
+      <module name="flink-sql-connector-hive-1.2.2_2.11" target="11" />
+      <module name="flink-sql-connector-hive-2.2.0_2.11" target="11" />
+      <module name="flink-sql-connector-hive-2.3.6_2.11" target="11" />
+      <module name="flink-sql-connector-hive-3.1.2_2.11" target="11" />
+      <module name="flink-sql-connector-kinesis_2.11" target="11" />
       <module name="flink-state-evolution-test" target="1.8" />
       <module name="flink-stream-sql-test_2.11" target="11" />
       <module name="flink-stream-state-ttl-test" target="1.8" />
@@ -272,6 +273,7 @@
       <module name="flink-connector-test-utils" options="-Xpkginfo:always" />
       <module name="flink-connector-twitter_2.11" options="-Xpkginfo:always --add-exports=java.base/sun.net.util=ALL-UNNAMED --add-exports=java.management/sun.management=ALL-UNNAMED --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED --add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED" />
       <module name="flink-connector-wikiedits_2.11" options="-Xpkginfo:always --add-exports=java.base/sun.net.util=ALL-UNNAMED --add-exports=java.management/sun.management=ALL-UNNAMED --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED --add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED" />
+      <module name="flink-connectors" options="-Xpkginfo:always" />
       <module name="flink-container_2.11" options="-Xpkginfo:always --add-exports=java.base/sun.net.util=ALL-UNNAMED --add-exports=java.management/sun.management=ALL-UNNAMED --add-exports=java.rmi/sun.rmi.registry=ALL-UNNAMED --add-exports=java.security.jgss/sun.security.krb5=ALL-UNNAMED" />
       <module name="flink-contrib" options="" />
       <module name="flink-core" options="-Xpkginfo:always" />
