@@ -2,9 +2,7 @@ package org.apache.flink.streaming.api.functions.dynamicalcluate.pojo;
 
 import org.apache.flink.streaming.api.functions.dynamicalcluate.utils.TimeUtil;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+
 
 import java.math.BigDecimal;
 import java.util.Objects;
@@ -14,9 +12,7 @@ import java.util.Objects;
  * @author: zhang
  * @date: 2022/6/22 19:19
  */
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+
 public class TagKafkaInfo {
     private String name;
     private String time;

@@ -1,18 +1,23 @@
 package org.apache.flink.streaming.api.functions.dynamicalcluate.pojo;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+
 
 import java.util.Arrays;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+
 public class TopicData {
     private String topic;
     private byte[] data;
     private byte[] key;
+
+    public TopicData() {
+    }
+
+    public TopicData(String topic, byte[] data, byte[] key) {
+        this.topic = topic;
+        this.data = data;
+        this.key = key;
+    }
 
     public String getTopic() {
         return topic;

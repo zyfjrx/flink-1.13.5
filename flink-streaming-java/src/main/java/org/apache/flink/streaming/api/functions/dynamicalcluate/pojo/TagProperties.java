@@ -1,8 +1,6 @@
 package org.apache.flink.streaming.api.functions.dynamicalcluate.pojo;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+
 
 import java.util.Objects;
 
@@ -11,9 +9,7 @@ import java.util.Objects;
  * @author: zhang
  * @date: 2022/6/23 13:33
  */
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+
 public class TagProperties {
     public Integer id;
     public Integer line_id;
@@ -66,5 +62,151 @@ public class TagProperties {
                 task_name,
                 param,
                 status);
+    }
+
+    public TagProperties(
+            Integer id,
+            Integer line_id,
+            String tag_name,
+            String byt_name,
+            String tag_topic,
+            String tag_type,
+            String calculate_type,
+            String tag_desc,
+            String value_min,
+            String value_max,
+            String task_name,
+            String sink_table,
+            String param,
+            Integer status) {
+        this.id = id;
+        this.line_id = line_id;
+        this.tag_name = tag_name;
+        this.byt_name = byt_name;
+        this.tag_topic = tag_topic;
+        this.tag_type = tag_type;
+        this.calculate_type = calculate_type;
+        this.tag_desc = tag_desc;
+        this.value_min = value_min;
+        this.value_max = value_max;
+        this.task_name = task_name;
+        this.sink_table = sink_table;
+        this.param = param;
+        this.status = status;
+    }
+
+    public TagProperties() {
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getLine_id() {
+        return line_id;
+    }
+
+    public void setLine_id(Integer line_id) {
+        this.line_id = line_id;
+    }
+
+    public String getTag_name() {
+        return tag_name;
+    }
+
+    public void setTag_name(String tag_name) {
+        this.tag_name = tag_name;
+    }
+
+    public String getByt_name() {
+        return byt_name;
+    }
+
+    public void setByt_name(String byt_name) {
+        this.byt_name = byt_name;
+    }
+
+    public String getTag_topic() {
+        return tag_topic;
+    }
+
+    public void setTag_topic(String tag_topic) {
+        this.tag_topic = tag_topic;
+    }
+
+    public String getTag_type() {
+        return tag_type;
+    }
+
+    public void setTag_type(String tag_type) {
+        this.tag_type = tag_type;
+    }
+
+    public String getCalculate_type() {
+        return calculate_type;
+    }
+
+    public void setCalculate_type(String calculate_type) {
+        this.calculate_type = calculate_type;
+    }
+
+    public String getTag_desc() {
+        return tag_desc;
+    }
+
+    public void setTag_desc(String tag_desc) {
+        this.tag_desc = tag_desc;
+    }
+
+    public String getValue_min() {
+        return value_min;
+    }
+
+    public void setValue_min(String value_min) {
+        this.value_min = value_min;
+    }
+
+    public String getValue_max() {
+        return value_max;
+    }
+
+    public void setValue_max(String value_max) {
+        this.value_max = value_max;
+    }
+
+    public String getTask_name() {
+        return task_name;
+    }
+
+    public void setTask_name(String task_name) {
+        this.task_name = task_name;
+    }
+
+    public String getSink_table() {
+        return sink_table;
+    }
+
+    public void setSink_table(String sink_table) {
+        this.sink_table = sink_table;
+    }
+
+    public String getParam() {
+        return param;
+    }
+
+    public void setParam(String param) {
+        this.param = param;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 }
