@@ -7,8 +7,6 @@
     <file url="file://$PROJECT_DIR$/flink-connectors/flink-connector-base/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-connectors/flink-connector-files/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-connectors/flink-connector-gcp-pubsub/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-connectors/flink-connector-hive/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-connectors/flink-connector-hive/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-connectors/flink-connector-jdbc/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-connectors/flink-connector-jdbc/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-connectors/flink-connector-kafka/src/main/java" charset="UTF-8" />
@@ -17,7 +15,6 @@
     <file url="file://$PROJECT_DIR$/flink-connectors/flink-hadoop-compatibility/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-connectors/flink-hcatalog/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-connectors/flink-sql-connector-kafka/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-contrib/flink-connector-wikiedits/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-core/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-dist/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-docs/src/main/java" charset="UTF-8" />

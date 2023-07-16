@@ -132,7 +132,8 @@ public class NFACompiler {
      *
      * @param <T>
      */
-    static class NFAFactoryCompiler<T> {
+    //	修改default->public
+    public static class NFAFactoryCompiler<T> {
 
         private final NFAStateNameHandler stateNameHandler = new NFAStateNameHandler();
         private final Map<String, State<T>> stopStates = new HashMap<>();
@@ -146,7 +147,8 @@ public class NFACompiler {
         private final AfterMatchSkipStrategy afterMatchSkipStrategy;
         private Map<String, State<T>> originalStateMap = new HashMap<>();
 
-        NFAFactoryCompiler(final Pattern<T, ?> pattern) {
+        // 修改
+        public NFAFactoryCompiler(final Pattern<T, ?> pattern) {
             this.currentPattern = pattern;
             afterMatchSkipStrategy = pattern.getAfterMatchSkipStrategy();
             windowTime = Optional.empty();
@@ -156,7 +158,8 @@ public class NFACompiler {
          * Compiles the given pattern into a {@link NFAFactory}. The NFA factory can be used to
          * create multiple NFAs.
          */
-        void compileFactory() {
+        //		修改default->public
+        public void compileFactory() {
             if (currentPattern.getQuantifier().getConsumingStrategy()
                     == Quantifier.ConsumingStrategy.NOT_FOLLOW) {
                 throw new MalformedPatternException(
@@ -180,11 +183,12 @@ public class NFACompiler {
             return afterMatchSkipStrategy;
         }
 
-        List<State<T>> getStates() {
+        //		修改default->public
+        public List<State<T>> getStates() {
             return states;
         }
-
-        long getWindowTime() {
+        //		修改default->public
+        public long getWindowTime() {
             return windowTime.orElse(0L);
         }
 
@@ -979,6 +983,17 @@ public class NFACompiler {
                                 stateTransition.getCondition(),
                                 new RichNotCondition<>(takeCondition)));
             }
+        }
+
+        /**
+         * @Description: 暴露公共方法用于返回一个nfaFactory对象
+         * @param: [windowTime, states, timeoutHandling]
+         * @return: org.apache.flink.cep.nfa.compiler.NFACompiler.NFAFactory<T>
+         * @auther: zhangyf
+         * @date: 2023/7/16 10:00
+         */
+        public NFAFactory<T> createNFAFactory(long windowTime,Collection<State<T>> states,boolean timeoutHandling){
+            return new NFACompiler.NFAFactoryImpl(windowTime,states,timeoutHandling);
         }
     }
 
