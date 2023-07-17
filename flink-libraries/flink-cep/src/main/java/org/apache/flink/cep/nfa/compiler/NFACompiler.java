@@ -987,13 +987,15 @@ public class NFACompiler {
 
         /**
          * @Description: 暴露公共方法用于返回一个nfaFactory对象
+         *
          * @param: [windowTime, states, timeoutHandling]
          * @return: org.apache.flink.cep.nfa.compiler.NFACompiler.NFAFactory<T>
          * @auther: zhangyf
          * @date: 2023/7/16 10:00
          */
-        public NFAFactory<T> createNFAFactory(long windowTime,Collection<State<T>> states,boolean timeoutHandling){
-            return new NFACompiler.NFAFactoryImpl(windowTime,states,timeoutHandling);
+        public NFAFactory<T> createNFAFactory(
+                long windowTime, Collection<State<T>> states, boolean timeoutHandling) {
+            return new NFACompiler.NFAFactoryImpl(windowTime, states, timeoutHandling);
         }
     }
 

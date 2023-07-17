@@ -78,15 +78,15 @@ public class SharedBuffer<V> {
     /** The cache of sharedBufferNode. */
     private final Map<NodeId, Lockable<SharedBufferNode>> entryCache = new HashMap<>();
 
-
     /**
      * @Description: 用于清理以前的状态
+     *
      * @param: []
      * @return: void
      * @auther: zhangyf
      * @date: 2023/7/17 10:42
      */
-    public void clean(){
+    public void clean() {
         eventsBuffer.clear();
         eventsBufferCache.clear();
         entryCache.clear();

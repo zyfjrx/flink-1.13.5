@@ -226,39 +226,39 @@ public class CepOperator<IN, KEY, OUT>
         }
     }
 
-
     /**
      * @Description: 接收到的数据是否会触发逻辑更新
+     *
      * @param: [element]
      * @return: boolean
      * @auther: zhangyf
      * @date: 2023/7/17 15:51
      */
-    private boolean needChange(IN element){
-        //获取用户对象
+    private boolean needChange(IN element) {
+        // 获取用户对象
         PatternProcessFunction<IN, OUT> userFunction = this.userFunction;
         return userFunction.getFlagNeedListern() && userFunction.needchange(element);
     }
 
-
-
     /**
      * @Description: 触发新逻辑注入时通过调用用户代码得到返回的pattern更新NFA
+     *
      * @param: []
      * @return: void
      * @auther: zhangyf
      * @date: 2023/7/17 15:51
      */
-    private void changeNFA(IN flagElement)throws Exception{
-        Pattern pattern ;
+    private void changeNFA(IN flagElement) throws Exception {
+        Pattern pattern;
         pattern = userFunction.getNewPattern(flagElement);
-        NFACompiler.NFAFactoryCompiler<IN> nfaFactoryCompiler = new NFACompiler.NFAFactoryCompiler<IN>((Pattern<IN,?>)pattern);
+        NFACompiler.NFAFactoryCompiler<IN> nfaFactoryCompiler =
+                new NFACompiler.NFAFactoryCompiler<IN>((Pattern<IN, ?>) pattern);
         nfaFactoryCompiler.compileFactory();
         boolean timeoutHandling = userFunction instanceof TimedOutPartialMatchHandler;
         NFACompiler.NFAFactory nfaFactory = NFACompiler.compileFactory(pattern, timeoutHandling);
-//		得到工厂的nfa
+        //		得到工厂的nfa
         NFA<IN> newNFA = nfaFactory.createNFA();
-//		这个地方为所有的边transition设置了cepRuntimeContext
+        //		这个地方为所有的边transition设置了cepRuntimeContext
         newNFA.open(cepRuntimeContext, new Configuration());
 //		覆盖
         nfa = newNFA;
@@ -267,17 +267,17 @@ public class CepOperator<IN, KEY, OUT>
         cleanSharedBuffer();
     }
 
-
     /**
      * @Description: 用于清理以前未匹配完成的部分状态，并且用新逻辑初始化新的NFAstate
      * 中必须包含可能作为开始的所有未匹配状态，否则无法进行匹配，因为没有开始state作为初始匹配
+     *
      * @param: []
      * @return: void
      * @auther: zhangyf
      * @date: 2023/7/17 15:51
      */
     private void cleanBeforeMatch() throws Exception {
-        //将原来的为匹配完全的状态清理
+        // 将原来的为匹配完全的状态清理
         NFAState nfaState = getNFAState();
         Queue<ComputationState> partialMatches = nfaState.getPartialMatches();
         partialMatches.clear();
@@ -287,7 +287,7 @@ public class CepOperator<IN, KEY, OUT>
         Queue<ComputationState> startingStates = new LinkedList<>();
         for (State<IN> state : nfa.getStates()) {
             if (state.isStart()) {
-//				这里创建了一个start状态
+                //				这里创建了一个start状态
                 startingStates.add(ComputationState.createStartState(state.getName()));
             }
         }
@@ -298,15 +298,15 @@ public class CepOperator<IN, KEY, OUT>
 
     /**
      * @Description: 用于清理以前的共享缓存SharedBuffer
+     *
      * @param: []
      * @return: void
      * @auther: greenday
      * @date: 2019/9/10 10:53
      */
-    private void cleanSharedBuffer(){
+    private void cleanSharedBuffer() {
         partialMatches.clean();
     }
-
 
     @Override
     public void processElement(StreamRecord<IN> element) throws Exception {
@@ -487,6 +487,13 @@ public class CepOperator<IN, KEY, OUT>
      * @param timestamp The timestamp of the event
      */
     private void processEvent(NFAState nfaState, IN event, long timestamp) throws Exception {
+
+        // 当数据触发新逻辑注入时，调用用户方法注入新逻辑
+        if (needChange(event)) {
+            changeNFA(event);
+            return;
+        }
+
         try (SharedBufferAccessor<IN> sharedBufferAccessor = partialMatches.getAccessor()) {
             Collection<Map<String, List<IN>>> patterns =
                     nfa.process(

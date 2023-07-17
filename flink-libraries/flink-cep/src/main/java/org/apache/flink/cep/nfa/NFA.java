@@ -53,6 +53,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Stack;
@@ -90,8 +91,8 @@ public class NFA<T> {
      * are directly derived from the user-specified pattern.
      */
     //	因为需要动态修改所以改为 去掉final ->
-    private  Map<String, State<T>> states;
-    //private final Map<String, State<T>> states;
+    private Map<String, State<T>> states;
+    // private final Map<String, State<T>> states;
 
     /**
      * The length of a windowed pattern, as specified using the {@link
@@ -104,6 +105,21 @@ public class NFA<T> {
      * ({@code true}), or silently discarded ({@code false}).
      */
     private final boolean handleTimeout;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        NFA<?> nfa = (NFA<?>) o;
+        return windowTime == nfa.windowTime
+                && handleTimeout == nfa.handleTimeout
+                && Objects.equals(states, nfa.states);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(states, windowTime, handleTimeout);
+    }
 
     public NFA(
             final Collection<State<T>> validStates,

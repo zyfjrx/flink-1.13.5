@@ -80,16 +80,7 @@ under the License.
 				</property>
 			</activation>
 			<modules>
-				<module>flink-sql-connector-elasticsearch6</module>
-				<module>flink-sql-connector-elasticsearch7</module>
-				<module>flink-sql-connector-hbase-1.4</module>
-				<module>flink-sql-connector-hbase-2.2</module>
-				<module>flink-sql-connector-hive-1.2.2</module>
-				<module>flink-sql-connector-hive-2.2.0</module>
-				<module>flink-sql-connector-hive-2.3.6</module>
-				<module>flink-sql-connector-hive-3.1.2</module>
 				<module>flink-sql-connector-kafka</module>
-				<module>flink-sql-connector-kinesis</module>
 			</modules>
 		</profile>
 	</profiles>
