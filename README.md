@@ -39,7 +39,8 @@ windowCounts.print()
               整个程序需要停止后,修改代码,重新打包程序然后给集群提交，无法实现逻辑
               动态修改和外部动态注入,目前已经实现了滑动窗口逻辑动态注入，基于消息驱动逻
               辑修改，可以手动往source端注入特定消息实现细腻度控制逻辑注入感知。
-DynamicSlidingEventTimeWindows 实现 TimeAdjustExtractor<T> 接口可从数据中获取窗口信息，每来一天数据就获取一次，从而触发窗口的分配，由于flink底层相同的窗口不会重复创建，从而也就天然实现了只有数据中窗口信息改变时才会触发新的窗口分配。
+              
+DynamicSlidingEventTimeWindows 实现 TimeAdjustExtractor<T> 接口可从数据中获取窗口信息，每来一条数据就获取一次，从而触发窗口的分配，由于flink底层相同的窗口不会重复创建，从而也就天然实现了只有数据中窗口信息改变时才会触发新的窗口分配。
 
 ### 基于Flink1.13.5源码 为CEP模块添加 逻辑动态注入功能
 
