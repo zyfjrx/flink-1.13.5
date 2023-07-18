@@ -5,31 +5,6 @@ Apache Flink is an open source stream processing framework with powerful stream-
 Learn more about Flink at [https://flink.apache.org/](https://flink.apache.org/)
 
 
-### Features
-
-* A streaming-first runtime that supports both batch processing and data streaming programs
-
-* Elegant and fluent APIs in Java and Scala
-
-* A runtime that supports very high throughput and low event latency at the same time
-
-* Support for *event time* and *out-of-order* processing in the DataStream API, based on the *Dataflow Model*
-
-* Flexible windowing (time, count, sessions, custom triggers) across different time semantics (event time, processing time)
-
-* Fault-tolerance with *exactly-once* processing guarantees
-
-* Natural back-pressure in streaming programs
-
-* Libraries for Graph processing (batch), Machine Learning (batch), and Complex Event Processing (streaming)
-
-* Built-in support for iterative programs (BSP) in the DataSet (batch) API
-
-* Custom memory management for efficient and robust switching between in-memory and out-of-core data processing algorithms
-
-* Compatibility layers for Apache Hadoop MapReduce
-
-* Integration with YARN, HDFS, HBase, and other components of the Apache Hadoop ecosystem
 
 
 ### Streaming Dynamic Window Example
@@ -60,92 +35,18 @@ val windowCounts = text.flatMap { w => w.split("\\s") }
 windowCounts.print()
 ```
 
-### Batch Example
-```scala
-case class WordWithCount(word: String, count: Long)
+基于Flink1.8.1源码 为CEP模块添加 逻辑动态注入功能
 
-val text = env.readTextFile(path)
+    功能描述: 使用CEP作为复杂事件处理引擎时,当逻辑频繁发生修改,以及阈值频繁调整时
+              整个程序需要停止后,修改代码,重新打包程序然后给集群提交，无法实现逻辑
+              动态修改和外部动态注入,目前已经实现了CEP逻辑动态注入，基于消息驱动逻
+              辑修改，可以手动往source端注入特定消息实现细腻度控制逻辑注入感知     
 
-val counts = text.flatMap { w => w.split("\\s") }
-  .map { w => WordWithCount(w, 1) }
-  .groupBy("word")
-  .sum("count")
+为Client端API中PatternStream添加方法registerListener(CepListener<T> cepListener)  注意必须在select方法之前调用
 
-counts.writeAsCsv(outputPath)
-```
+cepListener对象需要实现接口CepListener
 
+接口方法
 
-
-## Building Apache Flink from Source
-
-Prerequisites for building Flink:
-
-* Unix-like environment (we use Linux, Mac OS X, Cygwin, WSL)
-* Git
-* Maven (we recommend version 3.2.5 and require at least 3.1.1)
-* Java 8 or 11 (Java 9 or 10 may work)
-
-```
-git clone https://github.com/apache/flink.git
-cd flink
-mvn clean package -DskipTests # this will take up to 10 minutes
-```
-
-Flink is now installed in `build-target`.
-
-*NOTE: Maven 3.3.x can build Flink, but will not properly shade away certain dependencies. Maven 3.1.1 creates the libraries properly.
-To build unit tests with Java 8, use Java 8u51 or above to prevent failures in unit tests that use the PowerMock runner.*
-
-## Developing Flink
-
-The Flink committers use IntelliJ IDEA to develop the Flink codebase.
-We recommend IntelliJ IDEA for developing projects that involve Scala code.
-
-Minimal requirements for an IDE are:
-* Support for Java and Scala (also mixed projects)
-* Support for Maven with Java and Scala
-
-
-### IntelliJ IDEA
-
-The IntelliJ IDE supports Maven out of the box and offers a plugin for Scala development.
-
-* IntelliJ download: [https://www.jetbrains.com/idea/](https://www.jetbrains.com/idea/)
-* IntelliJ Scala Plugin: [https://plugins.jetbrains.com/plugin/?id=1347](https://plugins.jetbrains.com/plugin/?id=1347)
-
-Check out our [Setting up IntelliJ](https://nightlies.apache.org/flink/flink-docs-master/flinkDev/ide_setup.html#intellij-idea) guide for details.
-
-### Eclipse Scala IDE
-
-**NOTE:** From our experience, this setup does not work with Flink
-due to deficiencies of the old Eclipse version bundled with Scala IDE 3.0.3 or
-due to version incompatibilities with the bundled Scala version in Scala IDE 4.4.1.
-
-**We recommend to use IntelliJ instead (see above)**
-
-## Support
-
-Don’t hesitate to ask!
-
-Contact the developers and community on the [mailing lists](https://flink.apache.org/community.html#mailing-lists) if you need any help.
-
-[Open an issue](https://issues.apache.org/jira/browse/FLINK) if you found a bug in Flink.
-
-
-## Documentation
-
-The documentation of Apache Flink is located on the website: [https://flink.apache.org](https://flink.apache.org)
-or in the `docs/` directory of the source code.
-
-
-## Fork and Contribute
-
-This is an active open-source project. We are always open to people who want to use the system or contribute to it.
-Contact us if you are looking for implementation tasks that fit your skills.
-This article describes [how to contribute to Apache Flink](https://flink.apache.org/contributing/how-to-contribute.html).
-
-
-## About
-
-Apache Flink is an open source project of The Apache Software Foundation (ASF).
-The Apache Flink project originated from the [Stratosphere](http://stratosphere.eu) research project.
+        Boolean needChange()      每条数据会调用这个方法，用于确定这条数据是否会触发规则更新
+        Pattern returnPattern()   触发更新时调用，用于返回新的pattern作为新规则
