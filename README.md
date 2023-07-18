@@ -32,7 +32,7 @@ Learn more about Flink at [https://flink.apache.org/](https://flink.apache.org/)
 * Integration with YARN, HDFS, HBase, and other components of the Apache Hadoop ecosystem
 
 
-### Streaming Example
+### Streaming Dynamic Window Example
 ```scala
 case class WordWithCount(word: String, count: Long)
 
@@ -41,7 +41,20 @@ val text = env.socketTextStream(host, port, '\n')
 val windowCounts = text.flatMap { w => w.split("\\s") }
   .map { w => WordWithCount(w, 1) }
   .keyBy("word")
-  .window(TumblingProcessingTimeWindow.of(Time.seconds(5)))
+  .window(DynamicSlidingEventTimeWindows.of(
+    new TimeAdjustExtractor<T>() {
+      @Override
+      public long extract(T element) {
+        return element.getWinSize();
+      }
+    },
+    new TimeAdjustExtractor<T>() {
+      @Override
+      public long extract(T element) {
+        return element.getWinSlide();
+      }
+    }
+  ))
   .sum("count")
 
 windowCounts.print()
