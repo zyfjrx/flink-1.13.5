@@ -180,20 +180,6 @@ under the License.
 						</exclusion>
 					</exclusions>
 				</dependency>
-				<!-- override Hadoop's default dependency on too low SDK versions that do not work
-					with our httpcomponents version when initialising the s3a file system -->
-				<dependency>
-					<groupId>com.amazonaws</groupId>
-					<artifactId>aws-java-sdk-s3</artifactId>
-					<version>${aws.sdk.version}</version>
-					<scope>test</scope>
-				</dependency>
-				<dependency>
-					<groupId>com.amazonaws</groupId>
-					<artifactId>aws-java-sdk-sts</artifactId>
-					<version>${aws.sdk.version}</version>
-					<scope>test</scope>
-				</dependency>
 			</dependencies>
 		</profile>
 	</profiles>
