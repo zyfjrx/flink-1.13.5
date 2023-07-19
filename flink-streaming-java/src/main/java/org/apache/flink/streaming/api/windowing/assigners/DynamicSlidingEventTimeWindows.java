@@ -37,7 +37,7 @@ public class DynamicSlidingEventTimeWindows<T> extends WindowAssigner<T, TimeWin
             this.slideTimeAdjustExtractor = (ele) -> 0;
         } else {
             throw new IllegalArgumentException(
-                    "DynamicProcessingTimeWindows parameters must satisfy abs(offset) < slide and size > 0");
+                    "DynamicSlidingEventTimeWindows parameters must satisfy abs(offset) < slide and size > 0");
         }
     }
 
@@ -49,7 +49,7 @@ public class DynamicSlidingEventTimeWindows<T> extends WindowAssigner<T, TimeWin
             TimeAdjustExtractor<T> slideTimeAdjustExtractor) {
         if (Math.abs(offset) >= slide || size <= 0) {
             throw new IllegalArgumentException(
-                    "SlidingEventTimeWindows parameters must satisfy "
+                    "DynamicSlidingEventTimeWindows parameters must satisfy "
                             + "abs(offset) < slide and size > 0");
         }
 
@@ -119,14 +119,14 @@ public class DynamicSlidingEventTimeWindows<T> extends WindowAssigner<T, TimeWin
                 5 * 1000L, 5 * 1000L, 0L, sizeTimeAdjustExtractor, slideTimeAdjustExtractor);
     }
 
-    public static DynamicSlidingEventTimeWindows of(Time size, Time slide,TimeAdjustExtractor sizeTimeAdjustExtractor,TimeAdjustExtractor slideTimeAdjustExtractor) {
-        return new DynamicSlidingEventTimeWindows(
+    public static <T>DynamicSlidingEventTimeWindows<T> of(Time size, Time slide,TimeAdjustExtractor<T> sizeTimeAdjustExtractor,TimeAdjustExtractor<T> slideTimeAdjustExtractor) {
+        return new DynamicSlidingEventTimeWindows<T>(
                 size.toMilliseconds(), slide.toMilliseconds(), 0,
                 sizeTimeAdjustExtractor,slideTimeAdjustExtractor);
     }
 
-    public static DynamicSlidingEventTimeWindows of(Time size, Time slide, Time offset,TimeAdjustExtractor sizeTimeAdjustExtractor,TimeAdjustExtractor slideTimeAdjustExtractor) {
-        return new DynamicSlidingEventTimeWindows(
+    public static <T>DynamicSlidingEventTimeWindows<T> of(Time size, Time slide, Time offset,TimeAdjustExtractor<T> sizeTimeAdjustExtractor,TimeAdjustExtractor<T> slideTimeAdjustExtractor) {
+        return new DynamicSlidingEventTimeWindows<T>(
                 size.toMilliseconds(), slide.toMilliseconds(), offset.toMilliseconds(),
                 sizeTimeAdjustExtractor,slideTimeAdjustExtractor);
     }
