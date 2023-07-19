@@ -2,64 +2,48 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/flink-annotations/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-annotations/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-clients/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-clients/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-connectors/flink-connector-base/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-connectors/flink-connector-base/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-connectors/flink-connector-files/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-connectors/flink-connector-files/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-connectors/flink-connector-gcp-pubsub/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-connectors/flink-connector-jdbc/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-connectors/flink-connector-jdbc/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-connectors/flink-connector-kafka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-connectors/flink-connector-kafka/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-connectors/flink-file-sink-common/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-connectors/flink-file-sink-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-connectors/flink-hadoop-compatibility/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-connectors/flink-hcatalog/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-connectors/flink-sql-connector-kafka/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-connectors/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-connectors/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-core/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-core/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-dist/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-docs/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-docs/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-external-resources/flink-external-resource-gpu/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-external-resources/flink-external-resource-gpu/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-external-resources/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-external-resources/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-filesystems/flink-azure-fs-hadoop/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-filesystems/flink-azure-fs-hadoop/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-filesystems/flink-fs-hadoop-shaded/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-filesystems/flink-fs-hadoop-shaded/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-filesystems/flink-hadoop-fs/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-filesystems/flink-hadoop-fs/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-filesystems/flink-mapr-fs/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-filesystems/flink-mapr-fs/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-filesystems/flink-oss-fs-hadoop/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-filesystems/flink-oss-fs-hadoop/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-filesystems/flink-s3-fs-base/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-filesystems/flink-s3-fs-base/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-filesystems/flink-s3-fs-hadoop/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-filesystems/flink-s3-fs-hadoop/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-filesystems/flink-s3-fs-presto/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-filesystems/flink-s3-fs-presto/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-filesystems/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-filesystems/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-formats/flink-avro-confluent-registry/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-formats/flink-avro-confluent-registry/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-formats/flink-avro-glue-schema-registry/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-formats/flink-avro-glue-schema-registry/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-formats/flink-avro/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-formats/flink-avro/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-formats/flink-compress/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-formats/flink-compress/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-formats/flink-csv/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-formats/flink-csv/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-formats/flink-format-common/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-formats/flink-format-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-formats/flink-hadoop-bulk/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-formats/flink-json/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-formats/flink-json/src/main/resources" charset="UTF-8" />
@@ -69,31 +53,21 @@
     <file url="file://$PROJECT_DIR$/flink-formats/flink-parquet/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-formats/flink-parquet/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-formats/flink-sequence-file/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-formats/flink-sequence-file/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-formats/flink-sql-avro-confluent-registry/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-formats/flink-sql-avro-confluent-registry/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-formats/flink-sql-avro/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-formats/flink-sql-avro/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-formats/flink-sql-orc/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-formats/flink-sql-parquet/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-formats/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-formats/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-java/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-java/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-libraries/flink-cep-scala/src/main/scala" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-libraries/flink-cep/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-libraries/flink-gelly-examples/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-libraries/flink-gelly-examples/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-libraries/flink-gelly/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-libraries/flink-state-processing-api/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-libraries/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-libraries/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-metrics/flink-metrics-core/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-metrics/flink-metrics-core/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-metrics/flink-metrics-datadog/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-metrics/flink-metrics-datadog/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-metrics/flink-metrics-dropwizard/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-metrics/flink-metrics-dropwizard/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-metrics/flink-metrics-graphite/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-metrics/flink-metrics-graphite/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-metrics/flink-metrics-influxdb/src/main/java" charset="UTF-8" />
@@ -106,19 +80,11 @@
     <file url="file://$PROJECT_DIR$/flink-metrics/flink-metrics-slf4j/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-metrics/flink-metrics-statsd/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-metrics/flink-metrics-statsd/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-metrics/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-metrics/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-optimizer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-python/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-python/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-queryable-state/flink-queryable-state-client-java/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-queryable-state/flink-queryable-state-client-java/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-queryable-state/flink-queryable-state-runtime/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-queryable-state/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-queryable-state/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-quickstart/flink-quickstart-java/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-quickstart/flink-quickstart-scala/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-quickstart/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-runtime-web/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-runtime-web/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-runtime-web/web-dashboard" charset="UTF-8" />
@@ -128,13 +94,10 @@
     <file url="file://$PROJECT_DIR$/flink-state-backends/flink-statebackend-changelog/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-state-backends/flink-statebackend-heap-spillable/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-state-backends/flink-statebackend-rocksdb/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-state-backends/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-state-backends/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-streaming-java/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-table/flink-sql-client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-table/flink-sql-client/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-table/flink-sql-parser-hive/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-table/flink-sql-parser-hive/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-table/flink-sql-parser/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-table/flink-sql-parser/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-table/flink-table-api-java-bridge/src/main/java" charset="UTF-8" />
@@ -150,16 +113,9 @@
     <file url="file://$PROJECT_DIR$/flink-table/flink-table-planner/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-table/flink-table-runtime-blink/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-table/flink-table-runtime-blink/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-table/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-table/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-walkthroughs/flink-walkthrough-common/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-walkthroughs/flink-walkthrough-datastream-java/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-walkthroughs/flink-walkthrough-datastream-scala/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flink-walkthroughs/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-yarn/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-yarn/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tools/ci/java-ci-tools/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tools/ci/java-ci-tools/src/main/resources" charset="UTF-8" />
   </component>
