@@ -2119,7 +2119,6 @@ under the License.
 						</execution>
 					</executions>
 				</plugin>
-
 				<plugin>
 					<!-- run via "mvn org.owasp:dependency-check-maven:aggregate" -->
 					<groupId>org.owasp</groupId>
