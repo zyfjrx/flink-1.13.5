@@ -1,4 +1,4 @@
-package org.apache.flink.cep.listern;
+package org.apache.flink.cep.listen;
 
 import org.apache.flink.cep.pattern.Pattern;
 

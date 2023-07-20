@@ -20,7 +20,7 @@ package org.apache.flink.cep.functions;
 
 import org.apache.flink.annotation.PublicEvolving;
 import org.apache.flink.api.common.functions.AbstractRichFunction;
-import org.apache.flink.cep.listern.CepListener;
+import org.apache.flink.cep.listen.CepListener;
 import org.apache.flink.cep.pattern.Pattern;
 import org.apache.flink.cep.time.TimeContext;
 import org.apache.flink.util.Collector;

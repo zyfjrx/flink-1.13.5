@@ -4,7 +4,7 @@ import org.apache.flink.api.java.tuple.Tuple3;
 import org.apache.flink.cep.CEP;
 import org.apache.flink.cep.PatternStream;
 import org.apache.flink.cep.RichPatternSelectFunction;
-import org.apache.flink.cep.listern.CepListener;
+import org.apache.flink.cep.listen.CepListener;
 import org.apache.flink.cep.pattern.Pattern;
 import org.apache.flink.cep.pattern.conditions.RichIterativeCondition;
 import org.apache.flink.streaming.api.TimeCharacteristic;
